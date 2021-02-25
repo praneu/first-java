@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ReverseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		PrintWriter out = response.getWriter();
+		PrintWriter getout = response.getWriter();
 		String s1=request.getParameter("t1");
 		String s2=request.getParameter("t2");
 
@@ -21,6 +21,6 @@ public class ReverseServlet extends HttpServlet {
 			response.sendRedirect("http://localhost:8080/WebProject/home.html");
 		}
 		else
-			out.println("Login Failed!!");
+			getout.println("Login Failed!!");
 	}
 }
